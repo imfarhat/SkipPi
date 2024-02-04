@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "SkipPi",
+  "version": "0.0.1",
+  "description": "A Chrome/Firefox extension, SkipPi, designed to swiftly auto skip YouTube ads in under 0.1 second. SkipPi efficiently bypasses ads skippable after 5 seconds, completing the skip in less than 100 milliseconds, saving nearly 5 seconds per YouTube ad.",
+  "author": "imfarhat.dev@gmail.com",
+  "permissions": ["tabs", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_popup": "index.html",
+    "default_title": "SkipPi"
+  }
+}

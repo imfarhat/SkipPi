@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkipPi</title>
+    <link rel="icon" type="image/png" href="./icon.PNG" />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="">
+    <div id="/container" class="p-3 w-[26rem] flex flex-col gap-3">
+      <main id="/title" class="flex items-center justify-center">
+        <img
+          src="./icon-wide.png"
+          alt="SkipPi"
+          loading="eager"
+          class="aspect-video h-[4.5rem] -ml-3 -mt-7 -mb-4 bg-blend-multiply select-none"
+        />
+      </main>
+      <section
+        id="/status"
+        class="flex flex-col gap-1 items-start justify-center"
+      >
+        <span class="font-semibold">Status:</span>
+
+        <span
+          id="running"
+          class="py-1.5 px-3 bg-green-600 text-white rounded-md hidden w-fit"
+        >
+          Running
+        </span>
+        <span
+          id="stopped"
+          class="py-1.5 px-3 bg-red-500 text-white rounded-md w-fit"
+        >
+          Stopped
+        </span>
+      </section>
+
+      <section
+        id="adCountSection"
+        class="flex flex-col gap-1 items-start justify-center invisible"
+      >
+        <span class="font-semibold">Skip Count:</span>
+        <div class="py-1.5 px-3 bg-blue-600 text-white rounded-md w-fit">
+          <span id="adCountSpan">0</span> YouTube Ads
+        </div>
+      </section>
+
+      <section
+        id="statsNotLoaded"
+        class="flex flex-col gap-1 items-center justify-center hidden"
+      >
+        <div class="font-semibold animate-bounce">Oops!</div>
+        <span class="py-1.5 px-3 bg-blue-600 text-white rounded-md w-fit">
+          Want detailed stats? Re-open this pop-up!
+        </span>
+        <span class="p-1"
+          >Wait for the page to load and re-open this pop-up for stats!</span
+        >
+      </section>
+
+      <a
+        href="http://www.youtube.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        id="notOnYT"
+        class="flex flex-col gap-1 items-center justify-center"
+      >
+        <div class="font-semibold animate-bounce">Oops!</div>
+        <div class="py-1.5 px-3 bg-blue-600 text-white rounded-md w-fit">
+          Not on YouTube
+        </div>
+        <div class="p-1">
+          Open
+          <span class="font-semibold">youtube.com</span> to experience
+          <span class="font-semibold">SkipPi!</span>
+        </div>
+      </a>
+
+      <section
+        id="savings"
+        class="flex flex-col gap-1 items-start justify-center invisible"
+      >
+        <span class="font-semibold">You Saved:</span>
+        <div class="flex flex-row gap-2.5 items-center justify-center">
+          <span
+            id="adCountInSSpan"
+            class="py-1.5 px-3 bg-green-600 text-white rounded-md w-fit"
+          >
+            <span id="adCountInS">0</span> Seconds
+          </span>
+          <span id="sEqualsM" class="hidden">=</span>
+          <span
+            id="adCountInMSpan"
+            class="py-1.5 px-3 bg-green-600 text-white rounded-md w-fit hidden"
+          >
+            <span id="adCountInM">0</span> Minutes
+          </span>
+          <span id="mEqualsH" class="hidden">=</span>
+          <span
+            id="adCountInHSpan"
+            class="py-1.5 px-3 bg-green-600 text-white rounded-md w-fit hidden"
+          >
+            <span id="adCountInH">0</span> Hours
+          </span>
+        </div>
+      </section>
+
+      <footer
+        id="/credits"
+        class="flex flex-col items-center justify-center mt-2"
+      >
+        <a
+          href="https://farhateservices.pages.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs"
+        >
+          <span class="flex flex-row gap-1 items-center justify-center">
+            Developed by
+            <img
+              src="https://farhateservices.pages.dev/logo-head-black.png"
+              alt="Farhat e Services & Assistance"
+              loading="eager"
+              class="h-5 filter bg-blend-multiply"
+            />
+            Farhat e Services & Assistance
+          </span>
+        </a>
+      </footer>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
