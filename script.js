@@ -1,5 +1,4 @@
 try {
-  let adCount = parseInt(localStorage.getItem("adCount")) || 0;
   // Listen for requests for the ad count
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.requestAdCount) {
@@ -16,6 +15,7 @@ try {
       document.querySelector(".ytp-ad-skip-button");
     if (!adSkipButton) return;
     adSkipButton.click();
+    let adCount = parseInt(localStorage.getItem("adCount")) || 0;
     localStorage.setItem("adCount", ++adCount);
   }
   setInterval(clickAdSkipButton, 100);

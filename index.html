@@ -7,14 +7,14 @@
     <link rel="icon" type="image/png" href="./icon.PNG" />
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="">
+  <body class="overflow-hidden">
     <div id="/container" class="p-3 w-[26rem] flex flex-col gap-3">
       <main id="/title" class="flex items-center justify-center">
         <img
           src="./icon-wide.png"
           alt="SkipPi"
           loading="eager"
-          class="aspect-video h-[4.5rem] -ml-3 -mt-7 -mb-4 bg-blend-multiply select-none"
+          class="aspect-video h-[4.5rem] -ml-8 -mt-7 -mb-4 mix-blend-multiply saturate-[1.25] select-none"
         />
       </main>
       <section
@@ -39,7 +39,7 @@
 
       <section
         id="adCountSection"
-        class="flex flex-col gap-1 items-start justify-center invisible"
+        class="flex flex-col gap-1 items-start justify-center hidden"
       >
         <span class="font-semibold">Skip Count:</span>
         <div class="py-1.5 px-3 bg-blue-600 text-white rounded-md w-fit">
@@ -49,38 +49,38 @@
 
       <section
         id="statsNotLoaded"
-        class="flex flex-col gap-1 items-center justify-center hidden"
+        class="flex flex-col gap-1 mt-6 mb-2.5 items-center justify-center hidden"
       >
         <div class="font-semibold animate-bounce">Oops!</div>
-        <span class="py-1.5 px-3 bg-blue-600 text-white rounded-md w-fit">
+        <span class="py-1.5 px-3 bg-blue-600 text-white rounded-md">
           Want detailed stats? Re-open this pop-up!
         </span>
-        <span class="p-1"
-          >Wait for the page to load and re-open this pop-up for stats!</span
+        <span class="py-1"
+          >Please wait for the page to load & re-open this pop-up.</span
         >
       </section>
 
-      <a
-        href="http://www.youtube.com"
-        target="_blank"
-        rel="noopener noreferrer"
+      <section
         id="notOnYT"
-        class="flex flex-col gap-1 items-center justify-center"
+        class="flex flex-col gap-1 mt-6 mb-2.5 items-center justify-center"
       >
         <div class="font-semibold animate-bounce">Oops!</div>
-        <div class="py-1.5 px-3 bg-blue-600 text-white rounded-md w-fit">
-          Not on YouTube
-        </div>
-        <div class="p-1">
-          Open
-          <span class="font-semibold">youtube.com</span> to experience
-          <span class="font-semibold">SkipPi!</span>
-        </div>
-      </a>
+        <a
+          href="http://www.youtube.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="py-1.5 px-3 bg-blue-600 active:bg-blue-700 transition text-white rounded-md select-none"
+        >
+          Open YouTube
+        </a>
+        <span class="py-1">
+          It seems like right now you're not browsing YouTube.
+        </span>
+      </section>
 
       <section
         id="savings"
-        class="flex flex-col gap-1 items-start justify-center invisible"
+        class="flex flex-col gap-1 items-start justify-center hidden"
       >
         <span class="font-semibold">You Saved:</span>
         <div class="flex flex-row gap-2.5 items-center justify-center">
@@ -109,13 +109,13 @@
 
       <footer
         id="/credits"
-        class="flex flex-col items-center justify-center mt-2"
+        class="flex flex-col items-center justify-center mt-5 -mb-1.5"
       >
         <a
           href="https://farhateservices.pages.dev/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-xs"
+          class="text-xs w-fit"
         >
           <span class="flex flex-row gap-1 items-center justify-center">
             Developed by
@@ -130,6 +130,35 @@
         </a>
       </footer>
     </div>
+    <svg
+      class="absolute w-full -z-10 -bottom-[2rem] opacity-35 rotate-[189deg]"
+    >
+      <path d="M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0" fill="blue"></path>
+      <path
+        d="M 0 50 C 150 150 330 -30 500 50 L 500 0 L 0 0"
+        fill="white"
+        opacity="0.5"
+      ></path>
+      <path
+        d="M 0 50 C 215 150 250 0 500 100 L 500 0 L 0 0"
+        fill="white"
+        opacity="0.5"
+      ></path>
+    </svg>
+
+    <svg class="absolute w-full -z-10 -top-[1.25rem] opacity-35">
+      <path d="M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0" fill="blue"></path>
+      <path
+        d="M 0 50 C 150 150 330 -30 500 50 L 500 0 L 0 0"
+        fill="white"
+        opacity="0.5"
+      ></path>
+      <path
+        d="M 0 50 C 215 150 250 0 500 100 L 500 0 L 0 0"
+        fill="white"
+        opacity="0.5"
+      ></path>
+    </svg>
   </body>
   <script src="./index.js"></script>
 </html>
