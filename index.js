@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       // Update UI (index.html) based on the received message
       statsNotLoaded.classList.add("hidden");
-      adCountSection.classList.remove("invisible");
-      savingsSection.classList.remove("invisible");
+      adCountSection.classList.remove("hidden");
+      savingsSection.classList.remove("hidden");
       let adCount = message.adCount || 0;
 
       adCountSpan.innerHTML = adCount;
