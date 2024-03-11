@@ -1,4 +1,4 @@
-# <div align="center"><img src="https://raw.githubusercontent.com/imfarhat/projects/main/SkipPi/icon-wide-transparent-bg.png" alt="SkipPi&#960;" height="35"></div>
+# <div align="center"><img src="https://raw.githubusercontent.com/imfarhat/SkipPi/main/icon-wide.png" alt="SkipPi&#960;" height="75"></div>
 
 <!-- # SkipPi skip ads -->
 
