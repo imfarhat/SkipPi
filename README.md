@@ -8,15 +8,16 @@ SkipPi is a browser extension crafted to enhance your YouTube experience by swif
 
 1. **Chrome Users:**
 
-   - Download the SkipPi <a href="https://imfarhat.pages.dev/SkipPi/SkipPi.zip" download target="_blank" rel="noopener noreferrer">zip file here</a>
+   - Download the SkipPi <a href="https://github.com/imfarhat/SkipPi/raw/main/SkipPi.zip" download target="_blank" rel="noopener noreferrer">zip file here</a>
    - Extract the downloaded file to your preferred location
    - After extracting, watch the installation guide video on <a href="https://www.youtube.com/watch?v=Y3oMNGAAdao&t=0s" target="_blank" rel="noopener noreferrer">YouTube</a>
 
 2. **Firefox Users:**
-   - Download the SkipPi <a href="https://imfarhat.pages.dev/SkipPi/SkipPi.zip" download target="_blank" rel="noopener noreferrer">zip file here</a>
+   - Download the SkipPi <a href="https://github.com/imfarhat/SkipPi/raw/main/SkipPi.zip" download target="_blank" rel="noopener noreferrer">zip file here</a>
    - Extract the downloaded file to your preferred location
    - After extracting, watch the installation guide video on <a href="https://www.youtube.com/watch?v=Y3oMNGAAdao&t=68s" target="_blank" rel="noopener noreferrer">YouTube</a>
-
+   
+##### Note: If you are unable to download he zip file for testing/contribution purpose mail me on <a href="mailto:imfarhat.dev@gmail.com" target="_blank" rel="noopener noreferrer">imfarhat.dev@gmail.com</a>
 ## Functionality
 
 SkipPi utilizes a specific YouTube bug to bypass the original 5-second duration set for skippable ads. By leveraging this bug, SkipPi allows users to quickly skip ads, making the online video-watching experience more seamless. The extension achieves this by exploiting the bug and executing the skip action in under 0.1 seconds.
