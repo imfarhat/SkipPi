@@ -47,6 +47,6 @@ By choosing to use SkipPi, users are expected to adhere to ethical standards and
 
 ## Contact
 
-For inquiries and support, please email us at <a href="mailto:imfarhat.dev@gmail.com" target="_blank" rel="noopener noreferrer">imfarhat.dev@gmail.com</a>
+For enquiries and support, please email us at <a href="mailto:imfarhat.dev@gmail.com" target="_blank" rel="noopener noreferrer">imfarhat.dev@gmail.com</a>
 
 Feel free to explore and contribute to SkipPi!
