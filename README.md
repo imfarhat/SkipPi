@@ -4,6 +4,16 @@
 
 SkipPi is a browser extension crafted to enhance your YouTube experience by swiftly skipping skippable ads in under 0.1 seconds. SkipPi is compatible with both Chrome and Firefox browsers, providing users with flexibility and seamless ad-skipping capabilities.
 
+## Tech Stack
+
+- **HTML:** Used to build the user inte­rface, including buttons, containers, and text.
+
+- **Tailwind CSS:** E­mployed to efficiently style­ the interface compone­nts. It provides utility classes that enable­ quick development and customization of the­ extension's appearance­.
+
+- **JavaScript (JS):** Utilized to implement SkipPi's functionality. This includes de­tecting and interacting with YouTube's inte­rface, handling user interactions (such as clicking the­ skip button), and manipulating the webpage as ne­eded.
+
+- **manifest.json:** Contains metadata about SkipPi, like its name­, version, permissions (such as accessing YouTube­ tabs), and background scripts.
+
 ## Installation
 
 1. **Chrome Users:**
@@ -13,11 +23,17 @@ SkipPi is a browser extension crafted to enhance your YouTube experience by swif
    - After extracting, watch the installation guide video on <a href="https://www.youtube.com/watch?v=Y3oMNGAAdao&t=0s" target="_blank" rel="noopener noreferrer">YouTube</a>
 
 2. **Firefox Users:**
+
    - Download the SkipPi <a href="https://github.com/imfarhat/SkipPi/raw/main/SkipPi.zip" download target="_blank" rel="noopener noreferrer">zip file here</a>
    - Extract the downloaded file to your preferred location
    - After extracting, watch the installation guide video on <a href="https://www.youtube.com/watch?v=Y3oMNGAAdao&t=68s" target="_blank" rel="noopener noreferrer">YouTube</a>
-   
-##### Note: If you are unable to download he zip file for testing/contribution purpose mail me on <a href="mailto:imfarhat.dev@gmail.com" target="_blank" rel="noopener noreferrer">imfarhat.dev@gmail.com</a>
+
+**Note:**
+
+1. Make sure real-time protection in virus & threat protection settings (in Windows) is turned off, as your OS might treat this extension as a virus.
+
+2. If you are still facing any issue, please email me at [imfarhat.dev@gmail.com](mailto:imfarhat.dev@gmail.com).
+
 ## Functionality
 
 SkipPi utilizes a specific YouTube bug to bypass the original 5-second duration set for skippable ads. By leveraging this bug, SkipPi allows users to quickly skip ads, making the online video-watching experience more seamless. The extension achieves this by exploiting the bug and executing the skip action in under 0.1 seconds.
