@@ -16,21 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const sEqualsM = document.getElementById("sEqualsM");
   const mEqualsH = document.getElementById("mEqualsH");
   const openYouTubeBtn = document.getElementById("openYouTube");
+  let adCount;
   try {
-    //Open YouTube handler
-    openYouTubeBtn.addEventListener("click", function () {
-      // Check if there's already a tab open with youtube.com
-      chrome.tabs.query({ url: "https://www.youtube.com/*" }, function (tabs) {
-        if (tabs.length > 0) {
-          // If a tab is already open, focus on that tab
-          chrome.tabs.update(tabs[0].id, { active: true });
-        } else {
-          // If no tab is open, open a new tab with youtube.com
-          chrome.tabs.create({ url: "https://www.youtube.com" });
-        }
-      });
-    });
-
     // Query active tab and check for YouTube URL
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTab = tabs[0];
@@ -55,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       statsNotLoaded.classList.add("hidden");
       adCountSection.classList.remove("hidden");
       savingsSection.classList.remove("hidden");
-      let adCount = message.adCount || 0;
+      adCount = message.adCount || 0;
 
       adCountSpan.innerHTML = adCount;
       adCountInS.innerHTML = adCount * 5;
@@ -74,6 +61,24 @@ document.addEventListener("DOMContentLoaded", () => {
         mEqualsH.classList.remove("hidden");
         adCountInHSpan.classList.remove("hidden");
       }
+    });
+
+    //Open YouTube handler
+    openYouTubeBtn.addEventListener("click", function () {
+      // Check if there's already a tab open with youtube.com
+      chrome.tabs.query({ url: "https://www.youtube.com/*" }, function (tabs) {
+        if (tabs.length > 0) {
+          //Check if value of adcount is there or not
+          if (!adCount) {
+            chrome.tabs.create({ url: "https://www.youtube.com" });
+          }
+          // If a tab is already open, focus on that tab
+          else chrome.tabs.update(tabs[0].id, { active: true });
+        } else {
+          // If no tab is open, open a new tab with youtube.com
+          chrome.tabs.create({ url: "https://www.youtube.com" });
+        }
+      });
     });
   } catch (error) {
     // Log error details if an exception occurs
