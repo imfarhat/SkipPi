@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sEqualsM = document.getElementById("sEqualsM");
   const mEqualsH = document.getElementById("mEqualsH");
   const openYouTubeBtn = document.getElementById("openYouTube");
-  let adCount;
+
   try {
     // Query active tab and check for YouTube URL
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       statsNotLoaded.classList.add("hidden");
       adCountSection.classList.remove("hidden");
       savingsSection.classList.remove("hidden");
-      adCount = message.adCount || 0;
+      let adCount = message.adCount || 0;
 
       adCountSpan.innerHTML = adCount;
       adCountInS.innerHTML = adCount * 5;
@@ -63,17 +63,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    //Open YouTube handler
+    // Open YouTube handler
     openYouTubeBtn.addEventListener("click", function () {
       // Check if there's already a tab open with youtube.com
       chrome.tabs.query({ url: "https://www.youtube.com/*" }, function (tabs) {
         if (tabs.length > 0) {
-          //Check if value of adcount is there or not
-          if (!adCount) {
-            chrome.tabs.create({ url: "https://www.youtube.com" });
-          }
-          // If a tab is already open, focus on that tab
-          else chrome.tabs.update(tabs[0].id, { active: true });
+          // if tab is open then focus on the tab
+          chrome.tabs.update(
+            tabs[0].id,
+            { active: true },
+            function (updatedTab) {
+              // Check if adCount is undefined
+              if (adCount === NaN) {
+                // Reload the tab if adCount is undefined
+                chrome.tabs.reload(updatedTab.id);
+              }
+            }
+          );
         } else {
           // If no tab is open, open a new tab with youtube.com
           chrome.tabs.create({ url: "https://www.youtube.com" });
