@@ -54,7 +54,7 @@ Feel free to contribute to SkipPi! Your ideas, bug reports, or feature requests 
 
 Before using SkipPi, it's crucial to understand the following:
 
-- SkipPi exploits a YouTube bug to achieve its functionality. Users should be aware that exploiting bugs may violate the terms of service of the platform, and they are advised to use the extension responsibly.
+- SkipPi utilises a YouTube bug to achieve its functionality.
 - The extension is provided as-is, without any guarantees or warranties. Users are responsible for their actions while using SkipPi, and the developer holds no liability for any consequences.
 
 ## User Responsibilities
