@@ -28,11 +28,7 @@ SkipPi is a browser extension crafted to enhance your YouTube experience by swif
    - Extract the downloaded file to your preferred location
    - After extracting, watch the installation guide video on <a href="https://www.youtube.com/watch?v=Y3oMNGAAdao&t=68s" target="_blank" rel="noopener noreferrer">YouTube</a>
 
-**Note:**
-
-1. Make sure real-time protection in virus & threat protection settings (in Windows) is turned off, as your OS might treat this extension as a virus.
-
-2. If you are still facing any issue, please email me at [imfarhat.dev@gmail.com](mailto:imfarhat.dev@gmail.com).
+**Note:** Make sure real-time protection in virus & threat protection settings (in Windows) is turned off, as your OS might treat this extension as a virus.
 
 ## Functionality
 
@@ -63,6 +59,6 @@ By choosing to use SkipPi, users are expected to adhere to ethical standards and
 
 ## Contact
 
-For inquiries and support, please email us at <a href="mailto:imfarhat.dev@gmail.com" target="_blank" rel="noopener noreferrer">imfarhat.dev@gmail.com</a>
+For enquiries and support, please email us at <a href="mailto:imfarhat.dev@gmail.com" target="_blank" rel="noopener noreferrer">imfarhat.dev@gmail.com</a>
 
 Feel free to explore and contribute to SkipPi!
