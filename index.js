@@ -15,7 +15,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const savingsSection = document.getElementById("savings");
   const sEqualsM = document.getElementById("sEqualsM");
   const mEqualsH = document.getElementById("mEqualsH");
+  const openYouTubeBtn = document.getElementById("openYouTube");
   try {
+    //Open YouTube handler
+    openYouTubeBtn.addEventListener("click", function () {
+      // Check if there's already a tab open with youtube.com
+      chrome.tabs.query({ url: "https://www.youtube.com/*" }, function (tabs) {
+        if (tabs.length > 0) {
+          // If a tab is already open, focus on that tab
+          chrome.tabs.update(tabs[0].id, { active: true });
+        } else {
+          // If no tab is open, open a new tab with youtube.com
+          chrome.tabs.create({ url: "https://www.youtube.com" });
+        }
+      });
+    });
+
     // Query active tab and check for YouTube URL
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTab = tabs[0];
