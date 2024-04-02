@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const savingsSection = document.getElementById("savings");
   const sEqualsM = document.getElementById("sEqualsM");
   const mEqualsH = document.getElementById("mEqualsH");
-
   try {
     // Query active tab and check for YouTube URL
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
