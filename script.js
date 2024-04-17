@@ -10,9 +10,7 @@ try {
   });
 
   function clickAdSkipButton() {
-    const adSkipButton =
-      document.querySelector(".ytp-ad-skip-button-modern") ||
-      document.querySelector(".ytp-ad-skip-button");
+    const adSkipButton = document.querySelector(".ytp-skip-ad-button");
     if (!adSkipButton) return;
     adSkipButton.click();
     let adCount = parseInt(localStorage.getItem("adCount")) || 0;
