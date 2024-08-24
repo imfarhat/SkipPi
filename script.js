@@ -14,18 +14,16 @@ try {
       document.querySelector(".ytp-ad-skip-button-modern") ||
       document.querySelector(".ytp-skip-ad-button");
 
-    // const subscriptionPromoDismissBtn =
-    //   document.querySelector("#dismiss-button") ||
-    //   document.querySelector(".yt-mealbar-promo-renderer");
-
     if (!adSkipButton) return;
-    if (adSkipButton) {
-      adSkipButton.click();
-      let adCount = parseInt(localStorage.getItem("adCount")) || 0;
-      localStorage.setItem("adCount", ++adCount);
-    }
 
-    // if (subscriptionPromoDismissBtn) subscriptionPromoDismissBtn.click();
+    adSkipButton.style.display = "block";
+    adSkipButton.style.visibility = "visible";
+    adSkipButton.style.opacity = "1";
+    adSkipButton.disabled = false;
+
+    adSkipButton.click();
+    let adCount = parseInt(localStorage.getItem("adCount")) || 0;
+    localStorage.setItem("adCount", ++adCount);
   }
   setInterval(clickAdSkipButton, 100);
 } catch (error) {
