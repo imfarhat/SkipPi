@@ -16,37 +16,17 @@ try {
 
     if (!adSkipButton) return;
 
-    // Ensure the button is visible and not disabled
     adSkipButton.style.display = "block";
     adSkipButton.style.visibility = "visible";
     adSkipButton.style.opacity = "1";
     adSkipButton.disabled = false;
 
-    // Simulate a click event
-    const mouseEvent = new MouseEvent("click", {
-      view: window,
-      bubbles: true,
-      cancelable: true,
-      screenX: 0,
-      screenY: 0,
-      clientX: 0,
-      clientY: 0,
-      ctrlKey: false,
-      altKey: false,
-      shiftKey: false,
-      metaKey: false,
-      button: 0,
-      relatedTarget: null,
-    });
-
-    adSkipButton.dispatchEvent(mouseEvent);
-
+    adSkipButton.click();
     let adCount = parseInt(localStorage.getItem("adCount")) || 0;
     localStorage.setItem("adCount", ++adCount);
   }
-
   setInterval(clickAdSkipButton, 100);
 } catch (error) {
-  console.log("An error occurred while running SkipPi!");
+  console.log(`An error occured while running SkipPi!`);
   console.log(error);
 }
