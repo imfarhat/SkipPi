@@ -17,10 +17,10 @@ try {
     if (!adSkipButton) return;
 
     // Ensure the button is visible and not disabled
-    // adSkipButton.style.display = "block";
-    // adSkipButton.style.visibility = "visible";
-    // adSkipButton.style.opacity = "1";
-    // adSkipButton.disabled = false;
+    adSkipButton.style.display = "block";
+    adSkipButton.style.visibility = "visible";
+    adSkipButton.style.opacity = "1";
+    adSkipButton.disabled = false;
 
     // Simulate a click event
     const mouseEvent = new MouseEvent("click", {
